@@ -16,6 +16,9 @@ public class HighlightObject : MonoBehaviour
   private Renderer myRenderer;
 
   public AudioSource drums;
+  public AudioSource ambience;
+  public AudioSource whisper;
+  public AudioSource crow;
 
   void Start() {
     RenderSettings.skybox = skyboxOne;
@@ -42,6 +45,23 @@ public class HighlightObject : MonoBehaviour
     Destroy(gameObject, 0.1f);
     PageCount += 1;
     Debug.Log("Page Count = " + PageCount);
+    
+    if (PageCount == 1)
+    {
+      ambience.enabled = true;
+    }
+    if (PageCount == 2)
+    {
+      crow.enabled = true;
+    }
+    if (PageCount == 3)
+    {
+      drums.enabled = true;
+    }
+    if (PageCount == 4)
+    {
+      whisper.enabled = true;
+    }
     if (PageCount == 5)
     {
         RenderSettings.skybox = skyboxTwo;
@@ -51,10 +71,7 @@ public class HighlightObject : MonoBehaviour
              light.intensity = 0.5f;
          }
     }
-    if (PageCount == 3)
-    {
-      drums.enabled = true;
-    }
+
   }
 
   void OnMouseUp(){

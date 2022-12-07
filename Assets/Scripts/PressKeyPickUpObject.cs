@@ -30,6 +30,7 @@ public class PressKeyPickUpObject : MonoBehaviour
     {
         Instruction.SetActive(false);
         Action = false;
+        ThisTrigger.SetActive(false);
     }
 
 }
