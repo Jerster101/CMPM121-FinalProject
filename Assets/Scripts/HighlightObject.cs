@@ -15,6 +15,8 @@ public class HighlightObject : MonoBehaviour
   private bool mouseon = false;
   private Renderer myRenderer;
 
+  public AudioSource drums;
+
   void Start() {
     RenderSettings.skybox = skyboxOne;
     Debug.Log("Page Count = " + PageCount);
@@ -40,7 +42,7 @@ public class HighlightObject : MonoBehaviour
     Destroy(gameObject, 0.1f);
     PageCount += 1;
     Debug.Log("Page Count = " + PageCount);
-    if (PageCount == 2)
+    if (PageCount == 5)
     {
         RenderSettings.skybox = skyboxTwo;
         lights = FindObjectsOfType(typeof(Light)) as Light[];
@@ -48,6 +50,10 @@ public class HighlightObject : MonoBehaviour
          {
              light.intensity = 0.5f;
          }
+    }
+    if (PageCount == 3)
+    {
+      drums.enabled = true;
     }
   }
 
