@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour
 {
-    public float speed = 0.0125f;
+    public float speed = 0.03f;
     //public float rotSpeed = 1000;
 
 
@@ -12,9 +12,9 @@ public class PlayerBehavior : MonoBehaviour
     {   
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = 0.03f;
+            speed = 0.06f;
         } else if (Input.GetKeyUp(KeyCode.LeftShift)){
-            speed = 0.0125f;
+            speed = 0.03f;
         }
         if (Input.GetKey(KeyCode.W))
         {
