@@ -15,6 +15,7 @@ public class HighlightObject : MonoBehaviour
   private bool mouseon = false;
   private Renderer myRenderer;
 
+  public AudioSource backgroundMusic;
   public AudioSource drums;
   public AudioSource ambience;
   public AudioSource whisper;
@@ -71,6 +72,8 @@ public class HighlightObject : MonoBehaviour
          {
              light.intensity = 0.5f;
          }
+         drums.Stop();
+         backgroundMusic.Stop();
          hurray.enabled = true;
     }
 
