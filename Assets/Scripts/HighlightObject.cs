@@ -19,6 +19,7 @@ public class HighlightObject : MonoBehaviour
   public AudioSource ambience;
   public AudioSource whisper;
   public AudioSource crow;
+  public AudioSource hurray;
 
   void Start() {
     RenderSettings.skybox = skyboxOne;
@@ -70,6 +71,7 @@ public class HighlightObject : MonoBehaviour
          {
              light.intensity = 0.5f;
          }
+         hurray.enabled = true;
     }
 
   }
